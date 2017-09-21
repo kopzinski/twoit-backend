@@ -2,7 +2,7 @@ import _ from 'lodash'
 import db from '../../config/database'
 import types from '../model/types'
 import Vote from '../model/vote'
-import  { startAsTime, endAsTime } from '../services/cronoService'
+import  { startTodayAsTime, endTodayAsTime, startAsTime, endAsTime } from '../services/cronoService'
 
 class PlaceRepository {
     constructor() {}

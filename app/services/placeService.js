@@ -4,7 +4,7 @@ import types from '../model/types'
 import Place from '../model/place'
 import Vote from '../model/vote'
 import placeRepository from '../repositories/placeRepository'
-import  {startTodayAsTime, endTodayAsTime, timeIsOver, startAsTime, endAsTime} from './cronoService'
+import  { timeIsOver, startAsTime, endAsTime} from './cronoService'
 
 class PlaceService {
     constructor(){
@@ -43,7 +43,7 @@ class PlaceService {
 
         this.checkAlreadyWon(placeId,(won) => {
             if(won) {
-                res.status(400).send({error:'place already voted'})
+                res.status(400).send({error:'place already won this week'})
             }
         })
 

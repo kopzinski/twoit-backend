@@ -21,7 +21,7 @@ const endTodayAsTime = () => {
 const timeIsOver = () => {
     const now = new Date()
     const limit = new Date()
-    limit.setHours(11, 45, 0, 0)
+    limit.setHours(18, 45, 0, 0)
     return limit.getTime() < now.getTime()
 }
 

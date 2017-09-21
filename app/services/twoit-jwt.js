@@ -26,7 +26,6 @@ let strategy = new JwtStrategy(jwtOptions, function (jwt_payload, next) {
     })
     
 })
-console.log(passport)
 passport.use(strategy)
 const twoitJwt = {passport, jwtOptions, jwt}
 export default twoitJwt

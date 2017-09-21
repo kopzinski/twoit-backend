@@ -15,6 +15,12 @@ app.use(twoitJwt.passport.initialize())
 app.use(multer())
 app.use(bodyParser.json())
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization")
+  next()
+})
+
 const port = 3000
 
 app
