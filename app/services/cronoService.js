@@ -18,10 +18,10 @@ const endTodayAsTime = () => {
     return endAsTime(today)
 }
 
-const timeIsOver = () => {
+const timeIsOver = (limitHour, limitMinute) => {
     const now = new Date()
     const limit = new Date()
-    limit.setHours(18, 45, 0, 0)
+    limit.setHours(limitHour, limitMinute, 0, 0)
     return limit.getTime() < now.getTime()
 }
 

@@ -1,5 +1,5 @@
 import db from '../../config/database'
-import types from '../model/types'
+import types from '../constants/types'
 import User from '../model/user'
 
 class UserService {

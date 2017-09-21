@@ -4,7 +4,7 @@
   "description": "Backend solution to user vote places to have lunch",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit": "mocha  --compilers js:babel-core/register --opts test/unit/mocha.opts test/unit/**/*.spec.js",
     "start": "babel-node --presets es2015 server.js"
   },
   "author": "mellop@dbserver.com.br",
@@ -27,6 +27,9 @@
     "util": "^0.10.3"
   },
   "devDependencies": {
-    "should": "8.3.0"
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "should": "8.3.0",
+    "testdouble": "^3.2.6"
   }
 }

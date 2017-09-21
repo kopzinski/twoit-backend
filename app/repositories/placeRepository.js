@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import db from '../../config/database'
-import types from '../model/types'
+import types from '../constants/types'
 import Vote from '../model/vote'
 import  { startTodayAsTime, endTodayAsTime, startAsTime, endAsTime } from '../services/cronoService'
 

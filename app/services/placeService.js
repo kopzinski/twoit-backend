@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import db from '../../config/database'
-import types from '../model/types'
+import types from '../constants/types'
+import constants from '../constants/common'
 import Place from '../model/place'
 import Vote from '../model/vote'
 import placeRepository from '../repositories/placeRepository'
@@ -37,7 +38,7 @@ class PlaceService {
         const userId = req.user._id
         const placeId = req.params.placeId
 
-        if(timeIsOver()) {
+        if(timeIsOver(constants.limitHour, constants.limitMinute)) {
             res.status(400).send({error: "Time is over."})
         }
 
