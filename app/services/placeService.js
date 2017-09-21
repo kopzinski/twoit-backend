@@ -86,7 +86,6 @@ class PlaceService {
     }
 
     list(req, res) {
-        console.log('placeService.list()')
 
         db.find({type : types.place}).sort({votes: -1}).exec(function(err, doc) {
             if (err) return console.log(err)
@@ -96,7 +95,6 @@ class PlaceService {
 
 
             res.json(doc)
-            console.log(doc)
         })
     }    
 

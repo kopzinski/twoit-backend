@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   next()
 })
 
-const port = 3000
+
 
 app
     .route('/login')
@@ -49,6 +49,4 @@ app.all('\\/*', function (req, res) {
     res.status(401).end()
 })
 
-app.listen(port, function (app) {
-    console.log('Server listening at ' + port)
-})
+module.exports = app
