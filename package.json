@@ -4,7 +4,7 @@
   "description": "Backend solution to user vote places to have lunch",
   "main": "server.js",
   "scripts": {
-    "test:unit": "mocha  --compilers js:babel-core/register --opts test/unit/mocha.opts test/unit/**/*.spec.js",
+    "test": "mocha  --compilers js:babel-core/register --opts test/unit/mocha.opts test/unit/**/*.spec.js",
     "start": "babel-node --presets es2015 index.js"
   },
   "author": "mellop@dbserver.com.br",

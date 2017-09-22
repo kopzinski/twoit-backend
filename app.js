@@ -29,7 +29,7 @@ app
 
 app
     .route('/places')
-    .post(authenticate, placeService.add)
+    .put(authenticate, placeService.add)
     .get(authenticate, placeService.list)
 
 app
